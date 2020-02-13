@@ -6,7 +6,7 @@
     "week_number": "Semaine"
   },
   "week": {
-    "lundi": {
+    "Lundi": {
       "date": "Text4",
       "lessons": [
         {
@@ -39,7 +39,7 @@
         }
       ]
     },
-    "mardi": {
+    "Mardi": {
       "date": "Text5",
       "lessons": [
         {
@@ -72,7 +72,7 @@
         }
       ]
     },
-    "mercredi": {
+    "Mercredi": {
       "date": "Text6",
       "lessons": [
         {
@@ -105,7 +105,7 @@
         }
       ]
     },
-    "jeudi": {
+    "Jeudi": {
       "date": "Text7",
       "lessons": [
         {
@@ -138,7 +138,7 @@
         }
       ]
     },
-    "vendredi": {
+    "Vendredi": {
       "date": "Text8",
       "lessons": [
         {
