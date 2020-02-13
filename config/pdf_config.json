@@ -1,6 +1,6 @@
 {
   "header": {
-    "fullname": "Text1",
+    "student_fullname": "Text1",
     "company": "Text2",
     "training_date": "Text3",
     "week_number": "Semaine"

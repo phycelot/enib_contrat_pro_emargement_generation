@@ -33,8 +33,7 @@ def get_data():
         print("login...")
         if not edt_connexion.do_login():
             print('login failed')
-            get_data()
-            return
+            return get_data()
         edt_connexion.rebuild_form_cache()
         print('login success')
         config.set('user', 'login', login)
@@ -75,7 +74,7 @@ def get_data():
         with open(CONFIG_PATH, 'w') as configfile:
             config.write(configfile)
 
-        return parsed_edt
+        return parsed_edt, week_number
     except KeyboardInterrupt:
         return None
     except Exception as error:
