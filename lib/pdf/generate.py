@@ -1,26 +1,19 @@
 import pdfrw
 
-from data.constants import INVOICE_TEMPLATE_PATH, INVOICE_OUTPUT_PATH, ANNOT_KEY, SUBTYPE_KEY, WIDGET_SUBTYPE_KEY, \
+from data.constants import ANNOT_KEY, SUBTYPE_KEY, WIDGET_SUBTYPE_KEY, \
     ANNOT_FIELD_KEY
 
 
-def generate_pdf(data_dict):
-    # get template
-    template_pdf = pdfrw.PdfReader(INVOICE_TEMPLATE_PATH)
-
-    # process
+def write_fillable_pdf(input_pdf_path, output_pdf_path, data_dict):
+    template_pdf = pdfrw.PdfReader(input_pdf_path)
     annotations = template_pdf.pages[0][ANNOT_KEY]
-    print(annotations)
     for annotation in annotations:
         if annotation[SUBTYPE_KEY] == WIDGET_SUBTYPE_KEY:
             if annotation[ANNOT_FIELD_KEY]:
                 key = annotation[ANNOT_FIELD_KEY][1:-1]
-                print(key)
                 if key in data_dict.keys():
                     annotation.update(
                         pdfrw.PdfDict(V='{}'.format(data_dict[key]))
                     )
-    print(annotations)
-
-    # save pdf
-    pdfrw.PdfWriter().write(INVOICE_OUTPUT_PATH, template_pdf)
+    pdfrw.PdfWriter().write(output_pdf_path, template_pdf)
+    print("Filename : {}".format(output_pdf_path))

@@ -17,7 +17,7 @@ debug_rdts = (datetime.time(9, 30),  # H1
 def getStrHn(hour):
     for i, h in enumerate(debug_rdts):
         if hour == h:
-            return f"H{i + 1}"
+            return "H{i + 1}"
 
         elif hour < h:
             return "H{}+ ({})".format(i, hour.strftime("%H:%M"))

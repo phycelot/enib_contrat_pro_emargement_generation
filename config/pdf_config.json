@@ -48,15 +48,15 @@
         },
         {
           "module": "H2Nom du module_2",
-          "teacher": "H2Nom de lenseignant_2"
+          "teacher": "Text12"
         },
         {
           "module": "H3Nom du module_2",
-          "teacher": "H3Nom de lenseignant_2"
+          "teacher": "Text9"
         },
         {
           "module": "H4Nom du module_2",
-          "teacher": "H4Nom de lenseignant_2"
+          "teacher": "Text10"
         },
         {
           "module": "H5Nom du module_2",
@@ -64,7 +64,7 @@
         },
         {
           "module": "H6Nom du module_2",
-          "teacher": "H6Nom de lenseignant_2"
+          "teacher": "Text11"
         },
         {
           "module": "H7Nom du module_2",

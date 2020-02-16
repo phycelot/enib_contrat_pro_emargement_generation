@@ -39,20 +39,20 @@ def get_data():
         config.set('user', 'login', login)
 
         # student data
-        student_id = config.get('user', 'student_id')
         student_fullname = config.get('user', 'student_fullname')
-        if student_id and student_fullname:
+        if student_fullname:
             print("Student Fullname: {}".format(student_fullname))
-            print("Student ID: {}".format(student_id))
         else:
-            student_id = None
-            while not student_id:
+            student_fullname = raw_input('Student Fullname (ex: DUPOND Jean) : ')
+
+        student_id = None
+        while not student_id:
+            student_id = edt_connexion.get_students().get(student_fullname)
+            if student_id is None:
+                print("Student not found")
                 student_fullname = raw_input('Student Fullname (ex: DUPOND Jean) : ')
-                student_id = edt_connexion.get_students().get(student_fullname)
-                if student_id is None:
-                    print("student not found")
-            config.set('user', 'student_id', student_id)
-            config.set('user', 'student_fullname', student_fullname)
+        print("Student ID: {}".format(student_id))
+        config.set('user', 'student_fullname', student_fullname)
 
         # get edt data for this week
         week_number = int(raw_input('Week Number : '))
