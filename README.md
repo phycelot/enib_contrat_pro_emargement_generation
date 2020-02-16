@@ -1,10 +1,11 @@
 Edt Generation
 ===
-    Test pour la génération des feuilles de présence
+
+Thanks :
+- pdf generation : https://bostata.com/how-to-populate-fillable-pdfs-with-python
+- edt generation : https://git.enib.fr/pole-web/lightbar
     
-    thx to
-    - https://bostata.com/how-to-populate-fillable-pdfs-with-python/ (pdf generation)
-    - https://git.enib.fr/pole-web/lightbar (edt generation)
+Feel free to work on this project, make a merge request 😜
 
 ### Requirements
 - python3
@@ -28,3 +29,8 @@ $ python3 run.py
 ```
 
 ###### the end
+
+##Wish list :
+- Trame pdf fonctionnelle (doublons d'entrée de formulaire sur certaines cases, et des ids non customs a des endroits random)
+- un API pour l'edt
+- optimiser
