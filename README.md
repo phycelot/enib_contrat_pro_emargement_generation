@@ -1,6 +1,10 @@
 Edt Generation
 ===
     Test pour la génération des feuilles de présence
+    
+    thx to
+    - https://bostata.com/how-to-populate-fillable-pdfs-with-python/ (pdf generation)
+    - https://git.enib.fr/pole-web/lightbar (edt generation)
 
 ### Requirements
 - python3
